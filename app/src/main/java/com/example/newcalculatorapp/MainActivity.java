@@ -13,7 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button b1;
+    Button b1,b2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,12 +21,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         b1=(Button) findViewById(R.id.abt);
+        b2=(Button) findViewById(R.id.sbt);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent o=new Intent(getApplicationContext(), Add.class);
                 startActivity(o);
+            }
+        });
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent ob=new Intent(getApplicationContext(), Subtraction.class);
+                startActivity(ob);
             }
         });
 
